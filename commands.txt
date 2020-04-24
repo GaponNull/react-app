@@ -1,0 +1,13 @@
+Learned commands:
+
+sudo docker build -f Dockerfile.dev -t gaponec/react .
+
+sudo docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app gaponec/react
+
+sudo docker attach
+
+
+//RUNINI multistep docker build image with nginx
+
+sudo docker build -t gaponec/server .
+sudo docker run -p 8080:80 gaponec/server
