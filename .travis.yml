@@ -7,6 +7,4 @@ before_install:
     - docker build -f Dockerfile.dev -t gaponec/react-app .
 
 script:
-    - docker run CI=true gaponec/react-app npm run test
-
-language: generic
+    - docker run gaponec/react-app npm run test -- --coverage
